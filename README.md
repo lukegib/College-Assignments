@@ -1,5 +1,5 @@
 # College-Assignments
-This repository contains the code for multiple assignments I've completed whilst in college. It contains those from 1st, 2nd, and 3rd year. 4th year assignments can be found in their own repositories.
+This repository contains the code for multiple assignments I've completed whilst in college. It contains those from 1st, 2nd, and 3rd year. 4th year assignments can be found in their own repositories but are linked below.
 
 
 ## Contents
