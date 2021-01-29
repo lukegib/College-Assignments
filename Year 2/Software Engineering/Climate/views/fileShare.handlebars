@@ -1,0 +1,52 @@
+<!-- Nav bar -->
+<nav id="home">
+	<div id="navWrapper">
+		<div class="sideNav">
+			<a href="/users"><i class="fas fa-arrow-left"></i></a>
+		</div>
+
+		<div class="middleNav navbar-header">
+			Climate
+		</div>
+		<div class="sideNav setButton">
+			<a><i class="fas fa-cog"></i></a>
+		</div>
+	</div>
+</nav>
+
+<section id="fileTrBody">
+	<div id="userFileBody">
+		<div id='userImg'>
+		</div>
+		<div id="DragDropCont"> <!--drag and drop area-->
+			<form class="box" method="post" action="" ondrop="dropHandler(event;)" ondragover = "dragOverHnadler(event);"enctype="multipart/form-data">
+				<div class="boxInput">
+				<input class="boxFile" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+				<label for="file"><strong>Choose a file</strong><span class="boxDragDrop"> or drag it here</span>.</label>
+				<button class="boxButton" type="submit">Upload</button>
+				</div>
+				<div class="boxUploading">Uploading&hellip;</div>
+				<div class="boxSuccess">Done!</div>
+				<div class="boxError">Error!</div>
+			</form>
+		</div>
+		<div id="userUploadedFiles"> <!--user uploads area-->
+			<table id="user_uploadedTable">
+									</table>
+		</div>
+		<div id="abortButton" class="fileButton">
+			<i class="fas fa-times-circle" title="Abort Mission"></i>
+		</div>
+	</div>
+	<div id="guestFileBody">
+		<div id='guestImg'>
+		</div>
+			<div id="guestUploadedFiles"> <!--Guest Uploaded files area -->
+			<table id="guest_uploadedTable">
+									</table>
+		</div>
+		<div id="downloadButton" class="fileButton">
+			<i class="fas fa-download" title="Download Files"></i>
+		</div>
+	</div>
+</section>

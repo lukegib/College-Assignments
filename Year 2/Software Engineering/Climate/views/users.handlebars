@@ -1,0 +1,160 @@
+		<!-- Nav bar -->
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="/"><i class="fas fa-arrow-left"></i></a>
+				</div>
+				<div class="middleNav navbar-header">
+					Welcome, {{name}}
+				</div>
+				<div class="sideNav setButton">
+					<a><i class="fas fa-cog"></i></a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- The home interface - 5 parts  -->
+		<section id="homeInterface">
+
+			<!-- Part 1 - the user image thats sits in the middle -->
+			<div id="userImg" class="userHomeClimate"></div>
+
+			<!-- Part 2-5 - The 4 sections - Video, text, file, join   -->
+			<div id="interfaceWrapper">
+				<div class="feats">
+					<a href="/rooms/videoChat">
+						<div class="innerFlex tl">
+							<div class="featHead">
+								<i class="fas fa-video"></i>
+								<p>Video Call</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="feats">
+					<a href="/rooms/textChat">
+						<div class="innerFlex tr">
+							<div class="featHead">
+								<i class="far fa-comments"></i>
+								<p>Text Chat</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="feats">
+					<a href="/rooms/fileTransfer">
+						<div class="innerFlex bl">
+							<div class="featHead">
+								<i class="fas fa-file-export"></i>
+								<p>File Transfer</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="feats">
+					<a href="/rooms/join">
+						<div id="joinDoor" class="innerFlex br">
+							<div class="featHead">
+								<i class="fas fa-door-closed"></i>
+								<p>Join Room</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- SETTINGS - Hidden until click -->
+		<section id="settings">
+			<div id="interfaceWrapper">
+				<div id="options">
+					<ul id="settingsOps">
+						<li class="hvr-underline-from-center emailOp">Change Email Address</li>
+						<li class="hvr-underline-from-center passwordOp">Change Password</li>
+						<li class="hvr-underline-from-center profileOp">Change Profile Picture</li>
+						<li class="hvr-underline-from-center signoutBtn">Sign Out</li>
+					</ul>
+				</div>
+				<div id="vRule">
+				</div>
+				<div id="base">
+					<div id="emailchange" class="visible">
+							<h2 class="optTitle">Enter New Email Address</h2>
+							<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+							<button id="confirmButton" class="button">Confirm</button>
+
+					</div>
+					<div id="passChange">
+						<div id="oldPass">
+							<h2 class="optTitle">Enter Current Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+						<div id="newPass">
+							<h2 class="optTitle">Enter New Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<h2 class="optTitle second">Confirm Password</h2>
+							<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+					</div>
+					<div id="imageChange">
+						<div id="userImg"></div>
+						<h4>Choose An Avatar</h4>
+						<div id="avatarFlex">
+							<!-- 3 People -->
+							<div class="avatars">
+								<img src="/images/256_1.png"/>
+							</div>
+							<div class="avatars">
+								<img src="/images/256_12.png"/>
+							</div>
+							<div class="avatars">
+								<img src="/images/256_14.png"/>
+							</div>
+							<!-- 2 chacaters -->
+							<div class="avatars">
+								<img src="/images/256_8.png"/>
+							</div>
+							<div class="avatars">
+								<img src="/images/256_15.png"/>
+							</div>
+							<!-- 3 animals -->
+							<div class="avatars">
+								<img src="/images/256_16.png"/>
+							</div>
+						</div>
+						<div id="uploadImg">Upload an Image <i class="fas fa-upload"></i></div>
+						<div id="chooseUrl">Enter image url <i class="fas fa-image"></i></div>
+						<div id="optInputBox"><input type="text"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<script>
+			setTimeout(function() {
+				$(".navbar-header").fadeOut(function() {
+					$(this).text("Climate").fadeIn();
+				});
+			}, 4000);
+		</script>
+
+
+		<script>
+		<!-- Code to animate door opening on hover -->
+		$(document).ready(function(){
+			 $('#joinDoor').hover(function () {
+				setTimeout(function() {
+					$('.fa-door-closed').addClass('fa-door-open').removeClass('fa-door-closed');
+				}, 100);
+				}, function () {
+				setTimeout(function() {
+					$('.fa-door-open').addClass('fa-door-closed').removeClass('fa-door-open');
+				}, 100);
+			});
+
+		});
+
+		</script>

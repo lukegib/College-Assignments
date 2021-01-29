@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Climate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<!-- Animate.css - for browser POP animation  - Main only-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	
+	<!-- Personal stylesheet  -->
+	<link href="stylesheet1.css" rel="stylesheet">
+	
+	<!-- JQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+
+</head>
+
+<!-- Data-spy allows window to scroll to a location  -->
+<body id="homeBody" data-spy="scroll" data-target="#navbar" data-offset="0">
+	
+	<!-- Nav bar -->
+	<!-- ************ CLASS ADDED HERE - homeNav ***************************************************************************************-->
+	<nav class="centerFlex fixed-top homeNav" id="navbar">
+		<div id="logo" class="logo navItem">Climate</div>
+		<div class="navItem"><a class="nav-link" href="#features">Features</a></div>
+		<div class="navItem"><a class="nav-link" href="#about">About</a></div>
+		<div class="navItem"><a class="nav-link" href="#contact">Contact</a></div>
+		<div class="navItem"><a class="nav-link" href="logIn.html">Log In</a></div>
+	</nav>
+	
+	<!-- Header - opening full screen box -->
+	<header id="header">
+		<div class="active centerFlex" id="openingSlide">
+			<div>
+				<span id="displayLogo">Climate</span>
+				<p id="subscript">A Client To Client Web App</p>
+				<a href="logIn.html" class="button">Register</a>
+				<a href="logIn.html" class="button">Log In</a>
+			<div>
+		</div>
+	</header>
+	
+	<!-- Feature section -->
+	<section id="features">
+		<h2 class="text-center homeTitle">Features</h2>
+		<hr class="divider">
+		<div id="wrapper">
+			<!-- Para for writing and Holders for icons -->
+			<div class="left-para">	
+				<p>
+					<strong>Video call</strong> - Create a room to 1 on 1 video call friends, family and co-workers via computer, laptop or smart phone.  
+				</p>
+			</div>
+			<div class="right-holder">
+				<i class="fas fa-video rightPic pic1"></i>
+			</div>
+			<div class="left-holder">
+				<i class="fas fa-comments leftPic pic2"></i>
+			</div>
+			<div class="right-para">
+				<p>
+					<strong>Text chat</strong> - Instant message users in real time without having to worry about an information leak, 
+					as your messages don't go anywhere near a server.
+				</p>
+			</div>	
+			<div class="left-para line3">
+				<p>
+					<strong>File Transfer</strong> - File Transfer rooms allow for extremely large files to be transfered peer-to-peer at maximum efficiency 
+					and a low latency.
+				</p>
+			</div>
+			<div class="right-holder line3">
+				<i class="fas fa-file-export rightPic pic3"></i>
+			</div>
+			<div class="left-holder line4">
+				<i class="fas fa-lock leftPic pic4"></i>
+			</div>
+			<div class="right-para line4">
+				<p>
+					<strong>All Peer to Peer</strong> - Skype has video call, WhatsApp and Facebook have text chat, DropBox has file transfer, but none
+						of them have complete peer to peer connections meaning data can only be seen by you and your guest.
+				</p>
+			</div>
+		</div>
+		<!-- Browser support section -->
+		<h3 id="browserHead">Supported Browsers</h3>
+		<div id="wrapper2">
+			<div class="browser b1 animated"><i class="fab fa-chrome"></i><p>Chrome</p><p>28+</p></div> 
+			<div class="browser b2 animated"><i class="fab fa-firefox"></i><p>Firefox</p><p>22+</p></div>
+			<div class="browser b3 animated"><i class="fab fa-safari"></i><p>Safari</p><p>11+</p></div>	
+			<div class="browser b4 animated"><i class="fab fa-opera"></i><p>Opera</p><p>18+</p></div> 
+			<div class="browser b5 animated"><i class="fab fa-edge"></i><p>Edge</p><p>12+<p></div> 
+		</div>
+	</section>
+	
+	<!-- About Section -->
+	<section id="about">
+		<h2 class="text-center homeTitle">About Climate</h2>
+		<hr>
+		<div>
+			<h3>What is Climate?</h3>
+			<p>Climate is an advanced signalling web app powered by real time communications enabling peers to establish browser to browser connections with the 
+			ability to share and interconnect data on a decentralised platform.</p>
+		</div>
+		<div>
+			<h3>Who created Climate?</h3>
+			<div id="wrapper3">
+				<!-- Poloroid style photo that flips with more info on hover -->
+				<div class="flip-card">
+				  <div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="Avatar">
+						<p>Luke Gibbons</p>
+					</div>
+					<div class="flip-card-back"> 
+					  <h3>Front-End / Design</h3> 
+					  <p>Master of friendship, HTML5, CSS3 and Javascript</p>
+					  <p class="flip-para-body">Luke was in charge of the overall design of Climate. Why is the website named Climate?
+						Why is the theme blue? How is this website so beautifully crafted? Are you writing all of these questions, Luke?
+						These are all question we will never know the answer to unless, of course, you contact <del>me</del> him and ask.
+					  </p>
+					</div>
+				  </div>
+				</div>
+				<!-- Poloroid style photo that flips with more info on hover -->
+				<div class="flip-card">
+				  <div class="flip-card-inner">
+					<div class="flip-card-front">
+					  <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="Avatar"/>
+					  <p>Andrew Dawod</p>	
+					</div>
+					<div class="flip-card-back">
+						<h3>Back-End Development</h3> 
+						<p>Master of karate, node.js, webRTC and MondoDB</p>
+						<p class="flip-para-body">Andrew dealt with everything behind the scenes. This included the implementation of webRTC into the website, server requests, 
+						and dealing with the database system.</p>
+					  
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	
+	<!-- Contact Us section with a simple footer -->
+	<section id="contact">
+		<h2 class="text-center homeTitle">Contact Us</h2>
+		<hr>
+		<p id="contactIntro">You can hit us up at the email address below or catch us on twitter for the latest updates on Climate!</p>
+		<div class="contactsec">
+			<div id="email">
+				<i class="fas fa-envelope"></i>
+				<p>contact@climate</p>
+			</div>
+			<div id="twitter">
+				<i class="fab fa-twitter"></i>
+				<p>@climate</p>
+			</div>	
+		</div>
+		<div id="footer" class="text-center">
+			&copy; 2019 <span id="logo">Climate<span>
+		</div>	
+	</section>
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+	<script>
+	
+	<!-- Jquery code for animating the navbar, feature icons, and the browser icons -->
+	$(document).ready(function() {
+		$(document).scroll(function(){
+			var $nav = $(".logo");
+			<!--When the user scrolls more than navbar height, toggle class -->
+			$nav.toggleClass('appear', $(this).scrollTop() > $nav.height());
+			//The line under this *********************************************************************************************** 
+			$('#navbar').toggleClass('homeNav-scroll', $(this).scrollTop() > $nav.height());
+			
+			
+			
+			<!--The following are variables and toggleClass methods for the features and browsers -->
+			<!-- It calculates the distance scrolled so that only when the user reaches the icons they animate -->
+			var $p1 = $(".pic1"),
+				$p2 = $(".pic2"),
+				$p3 = $(".pic3"),
+				$p4 = $(".pic4"),
+				$bH = $("#browserHead"), 
+				p1_hT = $p1.offset().top,
+				p1_hH = $p1.outerHeight(),
+				p2_hT = $p2.offset().top,
+				p2_hH = $p2.outerHeight(),
+				p3_hT = $p3.offset().top,
+				p3_hH = $p3.outerHeight(),
+				p4_hT = $p4.offset().top,
+				p4_hH = $p4.outerHeight(),
+				bH_hT = $bH.offset().top,
+				bH_hH = $bH.outerHeight(), 
+				wH = $(window).height(),
+				wS = $(this).scrollTop();
+			$p1.toggleClass('slideRight', wS > (p1_hT + p1_hH - wH));
+			$p2.toggleClass('slideLeft', wS > (p2_hT + p2_hH - wH));
+			$p3.toggleClass('slideRight', wS > (p3_hT + p3_hH - wH));
+			$p4.toggleClass('slideLeft', wS > (p4_hT + p4_hH - wH));
+			$('.browser').toggleClass('bounceIn', wS > (bH_hT + bH_hH - wH));
+		});
+		
+	});
+	</script>
+	
+</body>
+
+</html>

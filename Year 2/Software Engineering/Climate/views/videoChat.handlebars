@@ -1,0 +1,57 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="/javascripts/rtcScripts/videoChat.js"></script>
+<script src="/javascripts/rtcScripts/signalling.js"></script>
+		<!-- Nav bar -->
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="/users"><i class="fas fa-arrow-left"></i></a>
+				</div>
+
+				<div class="middleNav navbar-header">
+					Climate
+				</div>
+				<div class="sideNav setButton">
+					<a><i class="fas fa-cog"></i></a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- a simple video section - user displayed small in bottom right, guest large full screen, and a small menu bar to mute/hide either -->
+		<section id="videoBody">
+			<video id="guestVid"></video>
+			<video id="userVid"></video>
+			<div id="vidIcons" class="iconFlex">
+				<div id="guestImg" class="guestImage">
+				</div>
+				<div id="iconCont" class="vertFlex">
+					<i id="muteSound" title="Mute Guest" class="fas fa-microphone-slash muteGuest"></i>
+					<i id="pauseVideo" title="Hide Guest" class="fas fa-mask hideGuest"></i>
+				</div>
+				<div id="userImg" class="userImage"></div>
+			</div>
+		</section>
+
+		<script>
+		$(document).ready(function(){
+			//Both guest and user use same mute/hide icons so
+			//when user face clicked - icon functions change (as class changes)
+			$('.userImage').click(function(){
+				$('#iconCont').css("background-color", "#1e90ff");
+				$('#muteIcon').addClass('muteMe').removeClass('muteThem');
+				$('#hideIcon').addClass('hideMe').removeClass('hideThem');
+				$('#muteIcon').prop('title', 'Mute Yourself');
+				$('#hideIcon').prop('title', 'Hide Yourself');
+			});
+
+			//when guest face clicked - icons class removed and replaced (can now have new function)
+			$('.guestImage').click(function(){
+				$('#iconCont').css("background-color", "#329f5b");
+				$('#muteIcon').addClass('muteThem').removeClass('muteMe');
+				$('#hideIcon').addClass('hideThem').removeClass('hideMe');
+				$('#muteIcon').prop('title', 'Mute Guest');
+				$('#hideIcon').prop('title', 'Hide Guest');
+			});
+		});
+		</script>

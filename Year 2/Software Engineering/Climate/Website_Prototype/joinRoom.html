@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+	
+		<!-- ***********Bootstrap************** -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+		<!-- Personal Theme  -->
+		<link href="stylesheet1.css" rel="stylesheet">
+		<!-- JQUERY -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<!-- Setting script file -->
+		<script src="settings.js"></script>
+
+	</head>
+	
+	<body>
+		<!-- Nav bar -->
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="homeClimate.html"><i class="fas fa-arrow-left"></i></a>
+				</div>
+				<div class="middleNav navbar-header">
+					Climate
+				</div>
+				<div class="sideNav setButton">
+					<a><i class="fas fa-cog"></i></a>
+				</div>
+			</div>
+		</nav>
+	
+		
+		<!-- Join room box - simply enter room name and join -->
+		<section id="join">
+			<div class="joinCont centerFlex">
+				<div id="joinBox">
+					<h3>Enter Room Name</h3>
+					<hr>
+					<div class="form-label-group">
+						<input type="text" id="inputRoomName" class="form-control" placeholder="Room Name" required autofocus>
+						<label for="inputUserame">Room Name</label>
+						<a href="#" class="btn btn-lg btn-primary btn-block text-uppercase">Join</a>
+					</div>
+				<div>
+			</div>  
+		</section>
+		
+		<!-- SETTINGS - Hidden until click -->
+		<section id="settings">
+			<div id="interfaceWrapper">
+				<div id="options">
+					<ul id="settingsOps">
+						<li class="hvr-underline-from-center emailOp">Change Email Address</li>
+						<li class="hvr-underline-from-center passwordOp">Change Password</li>
+						<li class="hvr-underline-from-center profileOp">Change Profile Picture</li>
+					</ul>
+				</div>
+				<div id="vRule">
+				</div>
+				<div id="base">
+					<div id="emailchange" class="visible">
+							<h2 class="optTitle">Enter New Email Address</h2>
+							<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+							<button id="confirmButton" class="button">Confirm</button>
+					
+					</div>
+					<div id="passChange">
+						<div id="oldPass">
+							<h2 class="optTitle">Enter Current Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+						<div id="newPass">
+							<h2 class="optTitle">Enter New Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<h2 class="optTitle second">Confirm Password</h2>
+							<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+					</div>
+					<div id="imageChange">
+						<div id="userImg"></div>
+						<h4>Choose An Avatar</h4>
+						<div id="avatarFlex">
+							<!-- 3 People -->
+							<div class="avatars">
+								<img src="PNG/256_1.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_12.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_14.png"/>
+							</div>
+							<!-- 2 chacaters -->
+							<div class="avatars">
+								<img src="PNG/256_8.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_15.png"/>
+							</div>
+							<!-- 3 animals -->
+							<div class="avatars">
+								<img src="PNG/256_16.png"/>
+							</div>
+						</div>
+						<div id="uploadImg">Upload an Image <i class="fas fa-upload"></i></div>
+						<div id="chooseUrl">Enter image url <i class="fas fa-image"></i></div>
+						<div id="optInputBox"><input type="text"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+</html>

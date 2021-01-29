@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>Climate Name Here</title>
+	
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<!-- Font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+		<!-- Personal stylesheet  -->
+		<link href="stylesheet1.css" rel="stylesheet">
+		<!-- JQUERY -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<!-- Setting script file -->
+		<script src="settings.js"></script>
+
+</head>
+
+<body>
+		<!-- Nav bar -->
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="homeClimate.html"><i class="fas fa-arrow-left"></i></a>
+				</div>
+				 
+				<div class="middleNav navbar-header">
+					Climate
+				</div>
+		
+				<div class="sideNav setButton">
+					<i class="fas fa-cog"></i>
+				</div>
+			</div>
+		</nav>
+		
+		<section id="fileTrBody">
+			<div id="userFileBody">
+				<div id='userImg'>
+				</div>
+				<div id="DragDropCont"> <!--drag and drop area-->
+					<form class="box" method="post" action="" ondrop="dropHandler(event;)" ondragover = "dragOverHnadler(event);"enctype="multipart/form-data">
+					  <div class="boxInput">
+						<input class="boxFile" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+						<label for="file"><strong>Choose a file</strong><span class="boxDragDrop"> or drag it here</span>.</label>
+						<button class="boxButton" type="submit">Upload</button>
+					  </div>
+					  <div class="boxUploading">Uploading&hellip;</div>
+					  <div class="boxSuccess">Done!</div>
+					  <div class="boxError">Error!</div>
+					</form>
+				</div>
+				<div id="userUploadedFiles"> <!--user uploads area --- Currently holds example files -->
+					<table id="user_uploadedTable">
+						<tr>
+							<th colspan='3'>Your Uploads</th>
+						</tr>
+						<tr>
+							<th>Size</th>
+							<th>Name</th>
+							<th>Type</th>
+						</tr>
+						<tr>
+							<td>40GB</td>
+							<td>movie.mp4</td>
+							<td>mp4</td>
+						</tr>
+						<tr>
+							<td>10GB</td>
+							<td>photo.jpg</td>
+							<td>jpg</td>
+						</tr>
+						<tr>
+							<td>40GB</td>
+							<td>movie.mp4</td>
+							<td>mp4</td>
+						</tr>
+						<tr>
+							<td>10GB</td>
+							<td>photo.jpg</td>
+							<td>jpg</td>
+						</tr>
+					</table>
+				</div>
+				<div id="abortButton" class="fileButton">
+					<i class="fas fa-times-circle" title="Abort Mission"></i>
+				</div>
+			</div>
+			<div id="guestFileBody">
+				<div id='guestImg'>
+				</div>
+					<div id="guestUploadedFiles"> <!--Guest Uploaded files area --- Currently holds example files -->
+					<table id="guest_uploadedTable">
+						<tr>
+							<th colspan='3' align='center'>Guest's Uploads</th>
+						<tr>
+						<tr>
+							<th>Size</th>
+							<th>Name</th>
+							<th>Type</th>
+						</tr>
+						<tr>
+							<td>40GB</td>
+							<td>movie.mp4</td>
+							<td>mp4</td>
+						</tr>
+						<tr>
+							<td>10GB</td>
+							<td>photo.jpg</td>
+							<td>jpg</td>
+						</tr>
+						<tr>
+							<td>40GB</td>
+							<td>movie.mp4</td>
+							<td>mp4</td>
+						</tr>
+						<tr>
+							<td>10GB</td>
+							<td>photo.jpg</td>
+							<td>jpg</td>
+						</tr>
+					</table>
+				</div>
+				<div id="downloadButton" class="fileButton">
+					<i class="fas fa-download" title="Download Files"></i>
+				</div>
+			</div>
+		</section>
+		
+		<!-- SETTINGS - Hidden until click -->
+		<section id="settings">
+			<div id="interfaceWrapper">
+				<div id="options">
+					<ul id="settingsOps">
+						<li class="hvr-underline-from-center emailOp">Change Email Address</li>
+						<li class="hvr-underline-from-center passwordOp">Change Password</li>
+						<li class="hvr-underline-from-center profileOp">Change Profile Picture</li>
+					</ul>
+				</div>
+				<div id="vRule">
+				</div>
+				<div id="base">
+					<div id="emailchange" class="visible">
+							<h2 class="optTitle">Enter New Email Address</h2>
+							<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+							<button id="confirmButton" class="button">Confirm</button>
+					
+					</div>
+					<div id="passChange">
+						<div id="oldPass">
+							<h2 class="optTitle">Enter Current Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+						<div id="newPass">
+							<h2 class="optTitle">Enter New Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<h2 class="optTitle second">Confirm Password</h2>
+							<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+					</div>
+					<div id="imageChange">
+						<div id="userImg"></div>
+						<h4>Choose An Avatar</h4>
+						<div id="avatarFlex">
+							<!-- 3 People -->
+							<div class="avatars">
+								<img src="PNG/256_1.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_12.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_14.png"/>
+							</div>
+							<!-- 2 chacaters -->
+							<div class="avatars">
+								<img src="PNG/256_8.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_15.png"/>
+							</div>
+							<!-- 3 animals -->
+							<div class="avatars">
+								<img src="PNG/256_16.png"/>
+							</div>
+						</div>
+						<div id="uploadImg">Upload an Image <i class="fas fa-upload"></i></div>
+						<div id="chooseUrl">Enter image url <i class="fas fa-image"></i></div>
+						<div id="optInputBox"><input type="text"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+</body>
+</html>		

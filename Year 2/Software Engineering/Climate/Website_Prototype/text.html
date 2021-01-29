@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+		<title>Climate Name Here</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<!-- ***********Bootstrap************** -->
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+		<!-- Personal Theme  -->
+		<link href="stylesheet1.css" rel="stylesheet">
+		
+		<!-- Jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		
+		<!-- Setting script file -->
+		<script src="settings.js"></script>
+
+</head>
+
+<body>
+		<!-- Nav bar -->
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="homeClimate.html"><i class="fas fa-arrow-left"></i></a>
+				</div>
+				<div class="middleNav navbar-header">
+					Climate
+				</div>
+				<div class="sideNav setButton">
+					<i class="fas fa-cog"></i>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- A simple text interface - user image on right, guest image on left, textbox in the middle -->
+		<section id="textInterface">
+			<div id="interfaceWrapper">
+				<div id="userSide" class="centerFlex user">
+					<div id="userImg"></div>
+				</div>
+				<div id="chatMid" class="chatFlex">
+					<div id="chatOutput">
+						<div id="testFlex">
+						
+						</div>
+						<div id="textExtend">
+							<i id="extendButton" class="fas fa-chevron-up"></i>
+						</div>
+					</div>
+					
+					<div id="chatInput">
+						<textarea type="textbox" id="inputText" placeholder="Enter Message..."></textarea>
+					</div>
+					<div id="sendButton" class="centerFlex">
+						<i id="send" class="fas fa-arrow-alt-circle-right"></i>
+					</div>
+				</div>
+				<div id="userSide" class="centerFlex guest">
+					<div id="guestImg"></div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- SETTINGS - Hidden until click -->
+		<section id="settings">
+			<div id="interfaceWrapper">
+				<div id="options">
+					<ul id="settingsOps">
+						<li class="hvr-underline-from-center emailOp">Change Email Address</li>
+						<li class="hvr-underline-from-center passwordOp">Change Password</li>
+						<li class="hvr-underline-from-center profileOp">Change Profile Picture</li>
+					</ul>
+				</div>
+				<div id="vRule">
+				</div>
+				<div id="base">
+					<div id="emailchange" class="visible">
+							<h2 class="optTitle">Enter New Email Address</h2>
+							<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+							<button id="confirmButton" class="button">Confirm</button>
+					
+					</div>
+					<div id="passChange">
+						<div id="oldPass">
+							<h2 class="optTitle">Enter Current Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+						<div id="newPass">
+							<h2 class="optTitle">Enter New Password</h2>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+							<h2 class="optTitle second">Confirm Password</h2>
+							<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+							<button id="confirmButton" class="button">Confirm</button>
+						</div>
+					</div>
+					<div id="imageChange">
+						<div id="userImg"></div>
+						<h4>Choose An Avatar</h4>
+						<div id="avatarFlex">
+							<!-- 3 People -->
+							<div class="avatars">
+								<img src="PNG/256_1.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_12.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_14.png"/>
+							</div>
+							<!-- 2 chacaters -->
+							<div class="avatars">
+								<img src="PNG/256_8.png"/>
+							</div>
+							<div class="avatars">
+								<img src="PNG/256_15.png"/>
+							</div>
+							<!-- 3 animals -->
+							<div class="avatars">
+								<img src="PNG/256_16.png"/>
+							</div>
+						</div>
+						<div id="uploadImg">Upload an Image <i class="fas fa-upload"></i></div>
+						<div id="chooseUrl">Enter image url <i class="fas fa-image"></i></div>
+						<div id="optInputBox"><input type="text"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+	<script>
+	
+	$(document).ready(function(){
+		
+		//Code for adding the typed message into the texts area
+		$('#send').click(function(){
+			message = $('#inputText').val();
+			message = message.replace(/\n/g,"<br>");
+			$('#testFlex').append("<div id='messageCont'><p id='message' class='userMes'>" + message + "</p></div>");
+			
+			//Keep scrollbar at bottom
+			$('#chatOutput').scrollTop($('#chatOutput')[0].scrollHeight);
+			
+			//Empty text input and close the the text input if it is extended 
+			$("#inputText").val('');
+			if($('#extendButton').height() > 0){
+				$('#extendButton').click();
+			}
+			$('#textExtend').hide();
+			
+		});
+		
+		
+		$('#guestTest').click(function(){
+			message = $('#inputText').val();
+			message = message.replace(/\n/g,"<br>");
+			$('#testFlex').append("<div id='messageCont'>" + "<p id='message' class='guestMes'>" + message + "</p></div>");
+			$('#chatOutput').scrollTop($('#chatOutput')[0].scrollHeight);
+		
+		});
+		
+		//plugin for scrollbar check
+		(function($) {
+			$.fn.hasScrollBar = function() {
+			return this.get(0).scrollHeight > this.get(0).clientHeight;
+			}
+		})(jQuery);
+		
+		//Check if the scrollbar is ever activated
+		$('#inputText').keydown(function(){
+			if ($('#inputText').hasScrollBar()){
+				$('#textExtend').show();
+			}
+		});
+		
+		//when a scrollbar has been detected a button pops up to allow the text input to be extended
+		
+		$('#extendButton').click(function(){
+			//Monitors clicks
+			var clicks = $(this).data('clicks');
+			  //if odd clicks opens
+			  if (!clicks) {
+				 $('#inputText').animate({height: '30vh'}, 500);
+				 $('#extendButton').animate({height: '25vh'}, 500);
+				 $('#extendButton').addClass('fa-chevron-down').removeClass('fa-chevron-up');
+				 
+			  } 
+			  //else even clicks so close
+			  else {
+				 $('#inputText').animate({height: '9vh'}, 500);
+				 $('#extendButton').animate({height: '0'}, 510);
+				 $('#extendButton').addClass('fa-chevron-up').removeClass('fa-chevron-down');
+			  }
+			  $(this).data("clicks", !clicks);
+			
+		});
+		
+		// THIS CHUNK HERE *******************************************************************************************************
+	
+		//code to move guest profile pic to left when window gets smaller
+		var img_added = false;
+		$(window).on('resize load', function(){
+			var win = $(this);	//this = window
+		
+			if(win.width() > 880 && img_added){
+				$('.user').empty();
+				$('.user').append("<div id='userImg'></div>");
+			}
+			if (win.width() <= 880 && !img_added) {
+			
+				$('.user').css("flex-wrap", "wrap");
+				$('.user').append("<div id='guestImg'></div>");
+				img_added = true;
+				
+			}
+			
+		});
+		
+		//ENDS HERE***************************************************************************************************************
+	
+	});
+	
+	</script>
+		
+
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	
+	<!-- Personal Theme  -->
+	<link href="stylesheet1.css" rel="stylesheet">
+	<!-- jquery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<!-- Turn.js plugin - log in page -->
+	<script src="turn.min.js"></script>
+
+</head>
+
+<body id="logInPage" class="login">
+
+	<!-- Nav bar -->
+	<nav class="centerFlex fixed-top" id="navbar">
+		<div class="logo navItem appear"><a href="main.html">Climate</a></div>
+		<div class="navItem"><a class="nav-link" href="main.html#features">Features</a></div>
+		<div class="navItem"><a class="nav-link" href="main.html#about">About</a></div>
+		<div class="navItem"><a class="nav-link" href="main.html#contact">Contact</a></div>
+		<div class="navItem"><a class="nav-link" href="logIn.html">Log In</a></div>
+	</nav>
+	
+	<!-- Flip book login page - flip page to reveal register/login -->
+	<div id="flipbookCont" class="centerFlex">
+	<div id="flipbook">
+	  <div class="page forward page-img" style="background: url('https://iphoneswallpapers.com/wp-content/uploads/2017/09/Alps-Mountain-Animated-Forest-iPhone-Wallpaper-iphoneswallpapers_com.jpg'); background-size: cover;"></div> 
+	  <!-- Register area -->
+	  <div class="page">
+          <div class="card-body">
+            <h5 class="card-title text-center">Register</h5>
+            <form class="form-register">
+              <div class="form-label-group">
+                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputUserame">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label>
+              </div>
+              
+              <div class="form-label-group">
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                <label for="inputConfirmPassword">Confirm password</label>
+              </div>
+
+              <a href="homeClimate.html" class="btn btn-lg btn-primary btn-block text-uppercase">Register</a>
+            </form>
+          </div>
+        </div>
+	  <div class="page forward page-img" style="background: url('https://i.pinimg.com/736x/58/b5/5e/58b55e9a8bc2c3eed16e28af49d53498.jpg?b=t'); background-size: cover;"></div>
+	  <div class="page back page-img" style="background: url('sunset.jpg'); background-size:cover;">
+	  </div>
+	  <!-- Login area -->
+	  <div class="page">
+          <div class="card-body">
+            <h5 class="card-title text-center">Welcome Back!</h5>
+            <form class="form-signin">
+        
+				<div class="form-label-group">
+					<input type="email" id="logInEmail" class="form-control" placeholder="Email address" required>
+					<label for="logInEmail">Email address</label>
+				</div>
+
+                <div class="form-label-group">
+					<input type="password" id="logInPassword" class="form-control" placeholder="Password" required>
+					<label for="logInPassword">Password</label>
+                </div>
+              
+				<a href="homeClimate.html" class="btn btn-lg btn-signIn btn-block text-uppercase">Sign In</a>
+				<a id="registerPrompt" class="back"><i class="fas fa-arrow-left"></i>&nbsp;Register</a>
+            </form>
+          </div>
+        </div>
+	  <div class="page back page-img" style="background: url('night.jpg'); background-size: cover;"></div>
+	</div>
+	</div>
+	
+<script>
+
+	$(document).ready(function(){
+	
+		//initialised flipbook
+		$("#flipbook").turn({
+		  width: 800,
+		  height: 550,
+		  autoCenter: true
+		});
+		
+		//this part *********************************************************************************************************************
+		
+		//Resize the flipbook to suit window size
+		$(window).on('resize load', function(){
+			var win = $(this); //this = window
+			if (win.width() > 880) {
+				$("#flipbook").turn('size', 800, 550);
+			}
+			if (win.width() <= 880) {
+				$("#flipbook").turn('size', 700, 550);
+			}	
+			if (win.width() <= 768) {
+				$("#flipbook").turn('size', 650, 550);
+			}
+			if (win.width() <= 685) {
+				$("#flipbook").turn('size', 550, 500);
+			}
+			if (win.width() <= 570) {
+				$("#flipbook").turn('size', 450, 450);
+			}
+			if (win.width() <= 480) {
+				$("#flipbook").turn('size', 400, 450);
+			}
+			if (win.width() <= 410) {
+				$("#flipbook").turn('size', 350, 450);
+			}
+			if (win.width() <= 360) {
+				$("#flipbook").turn('size', 310, 450);
+			}
+		});
+		
+		//**********************************************************************************************************************
+		
+		//initially open page to log in 
+		$("#flipbook").turn("options", {page: 4});
+		//click to go forward or back
+		$('.forward').click(function(){
+			$('#flipbook').turn('next');
+		});
+		$('.back').click(function(){
+			$('#flipbook').turn('previous');
+		});
+		
+		//change background color when page is turned to match picture
+		$("#flipbook").bind("turned", function(event, page, view) {
+			if(page==1){
+				$('#logInPage').css("background-color", "#C0E6FE");
+			}
+			else if(page==2 || page == 3){
+				$('#logInPage').css("background-color", "#3EABFE");
+			}
+			else if(page==4 || page == 5){
+				$('#logInPage').css("background-color", "#FEB01C");
+			}
+			else if(page==6){
+				$('#logInPage').css("background-color", "#012343");
+			}
+		});
+	
+	});
+	
+	
+</script>  
+  
+</body>
+</html>

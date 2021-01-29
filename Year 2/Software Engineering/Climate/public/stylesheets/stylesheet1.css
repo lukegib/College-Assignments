@@ -1,0 +1,2011 @@
+html{
+	scroll-behavior: smooth;
+	height: 100vh;
+}
+
+body{
+	height:100vh;
+}
+
+#homeBody{
+	overflow-x: hidden;
+}
+
+/* Home Navigation Bar */
+
+#navbar{
+	background-color: #1e90ff;
+}
+
+.homeNav{
+	padding-right: 40px;
+}
+
+.homeNav-scroll{
+	padding-right: 0;
+}
+
+.logo{
+	flex-grow: 0.0;
+	color: #1e90ff !important;
+	transition: color 2s;
+	transition: flex-grow 1s;
+}
+
+.appear{
+	flex-grow:0.7 !important;
+	color: white !important;
+}
+
+.navItem{
+	font-size:1.4em;
+}
+
+.navItem a{
+	color: white;
+}
+
+.nav-link{
+
+}
+
+/*opening full screen div*/
+
+#openingSlide{
+	flex-wrap:wrap;
+	margin:auto;
+	width: 100%;
+	height: 100vh;
+	background-color: #1e90ff;
+	text-align:center;
+	color:white;
+}
+
+#displayLogo{
+	font-size:9em;
+}
+
+#subscript{
+	font-size: 1.8em;
+}
+
+.button{
+	background-color: white;
+	border: none;
+	color: #1e90ff;
+	width: 30%;
+	padding: 8px 30px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.3em;
+	margin: 4% 2% 0 2%;
+	cursor: pointer;
+	border-radius:500px;
+}
+
+#features{
+	text-align:center;
+	overflow:hidden;
+}
+
+.homeTitle{
+	padding-top: 60px;
+}
+
+hr{
+	background-color: gray;
+	width: 80%;
+	height: 1px;
+}
+
+/* wrapper for features */
+
+#wrapper > div > p{
+	font-size: 1.6em;
+	padding: 15px 0;
+}
+
+#wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	width:80%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+#wrapper > div{
+	position: relative;
+}
+
+.left-para, .right-para{
+	width: 65%;
+	text-align:left;
+}
+
+.line3{
+
+}
+
+.line4{
+
+}
+
+.left-holder, .right-holder{
+	width: 35%;
+}
+
+.rightPic{
+	position:relative;
+	left: 110%;
+	transition: left 2s;
+}
+
+.leftPic{
+	position:relative;
+	right:110%;
+	transition: right 2s;
+}
+
+.slideRight{
+	left: 0 !important;
+}
+
+.slideLeft{
+	right: 0 !important;
+}
+
+#wrapper > div > i{
+	vertical-align: middle;
+	font-size: 8em;
+	padding-top: 15px;
+	color: #1E90FF;
+}
+
+/* wrapper for browser support */
+
+#wrapper2{
+	display:flex;
+	width: 90%;
+	margin: auto;
+}
+
+.browser{
+	width: 20%;
+	padding-top: 40px;
+}
+
+.browser > i{
+	font-size: 4em;
+}
+
+.b1{animation-delay: 0.3s}
+.b2{animation-delay: 0.6s}
+.b3{animation-delay: 0.9s}
+.b4{animation-delay:1.2s}
+.b5{animation-delay:1.5s}
+.b1>i{color:#189b5b}
+.b2>i{color:#f75318}
+.b3>i{color:#1bb1f1}
+.b4>i{color:#f7192d}
+.b5>i{color:#0078d7}
+
+#about{
+	text-align:center;
+}
+
+#about > div{
+	width: 80%;
+	margin: auto;
+	font-size: 1.6em;
+}
+
+#about > div > h3{
+	margin: 20px 0;
+}
+
+#wrapper3{
+	display:flex;
+	width: 80%;
+	margin: auto;
+	justify-content:space-around;
+}
+
+/* The flip card container*/
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flip-card-front img{
+	width: 100%;
+	height: 400px;
+	border: 10px solid white;
+
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.flip-para-body{
+	text-align:left;
+	font-size:0.8em;
+	padding: 10px;
+}
+
+.contactsec{
+	display: flex;
+	width:60%;
+	margin: auto;
+}
+
+#contactIntro{
+	text-align:center;
+	font-size: 1.6em;
+}
+
+#twitter, #email{
+	flex: 0 0 50%;
+	text-align:center;
+	font-size: 2em;
+}
+
+#twitter>i, #email>i{
+	font-size: 2em;
+}
+
+#footer{
+	width:100%;
+	height: 5vh;
+	font-size: 1.3em;
+}
+
+/**** Log In / Register page ****/
+
+#logInPage{
+	background-color: #FEB01C;
+	transition: background-color 0.4s ease-in-out;
+}
+
+#logInPage #navbar{
+	background-color: transparent;
+	z-index: 0;
+
+}
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+.login{
+    overflow:hidden;
+}
+
+#flipbookCont{
+	width:100%;
+}
+
+#flipbook{
+	position: relative;
+    width:800px;
+    height:50vh;
+	margin-top: 4% !important;
+}
+
+#flipbook .page{
+    width:800px;
+    height:50vh;
+    background-color:white;
+    line-height:300px;
+    font-size:20px;
+    text-align:center;
+}
+
+#flipbook .page-wrapper{
+    -webkit-perspective:2000px;
+    -moz-perspective:2000px;
+    -ms-perspective:2000px;
+    -o-perspective:2000px;
+    perspective:2000px;
+}
+
+/* Forms on log in / register page - bootstrap */
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.7em;
+}
+
+.card-signin .card-img-left {
+  width: 45%;
+  background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512');
+  background-size: cover;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-control{
+  font-size: 1em;
+}
+
+.form-signin > .form-label-group > .form-control:focus{
+	border-color: #FEB10C;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 177, 12, 0.6);
+}
+
+.form-signin .btn, .form-register .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-signIn{
+	background-color: #FEB10C !important;
+	color: white !important;
+}
+
+.btn-signIn:hover{
+	color:white !important;
+	background-color:#E7A10B !important;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: #495057;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.page-img{
+	cursor:pointer;
+}
+
+#registerPrompt{
+	color: #280000;
+	cursor: pointer;
+}
+
+
+/**** User home page and its navbar *****/
+
+#home{
+	text-align:center;
+	padding: 10px;
+	font-size: 1.7em;
+	background-color: #1e90ff;
+	color: white;
+}
+
+#homeInterface, #textInterface{
+	height: -moz-calc(100% - 60px);
+    height: -webkit-calc(100% - 60px);
+    height: calc(100% - 60px);
+}
+
+#navWrapper{
+	display:flex;
+	width: 100%;
+}
+
+.middleNav{
+	width:95%;
+}
+
+.sideNav{
+	width:5%;
+}
+
+.sideNav > a{
+	color: white;
+	transition: font-size 0.1s linear;
+}
+
+.sideNav > p{
+	font-size: 0.8em;
+	line-height: 43px;
+}
+
+.setButton:hover{
+	cursor:pointer;
+}
+
+#interfaceWrapper{
+	display: flex;
+	flex-wrap:wrap;
+	width: 100%;
+	margin: auto;
+	height: 100%;
+}
+
+.feats{
+	width: 50%;
+	height: 50%;
+}
+
+.innerFlex{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	height: 100%;
+	transition: background-color 0.2s;
+}
+
+.featHead{
+	text-align:center;
+	color: #1e90ff;
+	transition: color 0.2s;
+}
+
+.innerFlex:hover{
+	background-color: #1e90ff;
+}
+
+.innerFlex:hover .featHead{
+	color:white;
+}
+
+a:hover{
+	text-decoration:none;
+}
+
+.tl{
+	border-bottom: 2px solid #1e90ff;
+	border-right: 2px solid #1e90ff;
+}
+.tr{
+	border-bottom:2px solid #1e90ff;
+	border-left: 2px solid #1e90ff;
+}
+.bl{
+	border-top: 2px solid #1e90ff;
+	border-right:2px solid #1e90ff;
+}
+.br{
+	border-top:2px solid #1e90ff;
+	border-left:2px solid #1e90ff;;
+}
+
+.featHead > i{
+	font-size: 8em;
+	transition: font-size 0.2s;
+}
+
+.featHead > p{
+	font-size: 1.5em;
+	padding-top: 10px;
+	transition: font-size 0.2s;
+}
+
+.innerFlex:hover .featHead i{
+	font-size:8.5em;
+}
+
+.innerFlex:hover .featHead p{
+	font-size: 1.6em;
+}
+
+.userHomeClimate{
+	position: absolute;
+	/*its width\height is 150px*/
+	left: 50%;
+	margin-left: -75px;
+	top: 50%;
+	margin-top: -46px;
+}
+
+/******** Settings Page ********/
+
+#settings{
+	position: fixed;
+	height:100%;
+	width:0;
+	top:60px;
+	right:0;
+	background-color: white;
+	transition: width 0.5s;
+
+}
+
+#settings #interfaceWrapper{
+	width:90%;
+}
+
+#options{
+	width:33%;
+	background-color:white;
+	height:90vh;
+}
+
+#settingsOps{
+	width:80%;
+	margin:auto;
+	font-size: 1.7em;
+}
+
+#settingsOps > li{
+	list-style-type:none;
+	margin-top:10vh;
+}
+
+#vRule{
+	width:1%;
+	background-color:#1e90ff;
+	height:90vh;
+	border-radius:1000%;
+	padding: 5% 0;
+}
+
+#base{
+	width:65%;
+	background-color:white;
+	height:90vh;
+}
+
+.visible{
+	display: block !important;
+}
+
+#emailchange, #oldPass, #newPass, #imageChange{
+	display: none;
+	width: 70%;
+	text-align:center;
+	margin:auto;
+	padding-top: 8vh;
+}
+
+.optTitle{
+	margin-bottom:5vh;
+}
+
+#confirmButton{
+	margin-top: 5vh;
+}
+
+#oldPass{
+	display:none;
+}
+
+#newPass{
+	display:none;
+}
+
+.optTitle.second{
+	margin-top: 5vh;
+}
+
+#imageChange{
+	font-size: 1.4em;
+	width: 100%;
+}
+
+#imageChange > #userImg{
+	margin:auto;
+}
+
+#uploadImg, #chooseUrl{
+	width:40%;
+	margin:auto;
+	display: inline-block;
+	padding-top: 30px;
+}
+
+#optInputBox{
+	display: none;
+}
+
+#imageChange h3{
+	margin-top: 30px;
+}
+
+#imageChange h4{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#avatarFlex{
+	display:flex;
+	width:90%;
+	margin:auto;
+	justify-content: space-around;
+}
+
+
+
+.avatars img{
+	width: 90px;
+	height: 90px;
+}
+
+ .emailOp, .passwordOp, .profileOp, .signoutBtn{
+	 cursor: pointer;
+ }
+
+/* Underline From Center - from hover.css stylesheet */
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before, .hvr-underline-from-center:focus{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+
+/********* Text Chat Page ********/
+
+#userImg, #guestImg{
+	border-radius: 50%;
+	height: 150px;
+	width: 150px;
+	background-size: 100% 100%;
+}
+
+#userImg{
+	border: 4px solid #1e90ff;
+	background-color: #1e90ff;
+}
+
+#guestImg{
+	border: 4px solid #329F5B;
+}
+
+#userSide{
+	width: 25%;
+	height: 100%;
+}
+
+#chatMid{
+	width: 50%;
+	height: 100%;
+	border-radius: 1%;
+	border-right: 3px solid #1e90ff;
+	border-left: 3px solid #1e90ff;
+}
+
+.chatFlex{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+#chatOutput{
+	width:100%;
+	height: 85%;
+	overflow: auto;
+	padding: 10px 2px 0 2px;
+}
+
+#chatInput{
+	width:90%;
+	height:10vh;
+	border-radius:2%;
+	margin-left: 1%;
+}
+
+#chatInput textarea{
+	resize: none;
+}
+
+#sendButton{
+	width:9%;
+	font-size: 3.5em;
+	color: #1e90ff;
+}
+
+.centerFlex{
+	display:flex !important;
+	justify-content: center;
+	align-items: center;
+}
+
+#inputText{
+	width: 44%;
+	height: 9vh;
+	position: absolute;
+	bottom: 6px;
+}
+
+#textExtend{
+	position:absolute;
+	bottom:60px;
+	width: 44%;
+	text-align:center;
+	display: none;
+}
+
+#extendButton{
+	height: 0;
+}
+
+#testFlex{
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+}
+
+#messageCont{
+	width:100%;
+}
+
+#messageCont .guestMes{
+	float:right;
+}
+
+#message{
+	width:auto;
+	max-width: 60%;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 5px;
+	word-wrap: break-word;
+	margin-bottom: 1rem;
+}
+
+.userMes{
+	background-color:#1e90ff;
+}
+
+#gapfill{
+	width: 40%;
+}
+
+/********* Join Room Page ***********/
+
+#join{
+	height:calc(100% - 60px);
+	width:100%;
+	background: url('/images/mountains.jpg');
+	background-size: 100% 100%;
+}
+
+.joinCont{
+	height: 65vh;
+}
+
+#joinBox{
+	width: 40%;
+	background-color: rgba(0,123,255, 0.3);
+	border-radius: 20px;
+	text-align:center;
+}
+#joinBox h3{
+	margin-top:20px;
+	color: white;
+
+}
+#joinBox hr{
+	background-color: rgba(255,255,255,0.6);
+}
+ #joinBox .form-label-group{
+	width: 80%;
+	margin: auto;
+ }
+
+ #joinBox .form-label-group .btn-primary{
+	background-color:white;
+	color: #007bff;
+ }
+
+ #joinBox .form-label-group .btn-primary:hover{
+	background-color: #D9D9DA;
+ }
+ #joinBox label{
+	width: auto;
+ }
+ #joinBox .form-label-group a{
+	width: 30%;
+	border-radius: 500px;
+	margin:auto;
+	margin-top: 10px;
+ }
+
+/******** VIDEO CHAT PAGE *********/
+
+#videoBody{
+	height: calc(100% - 60px);
+	width: 100%;
+}
+
+#guestVid{
+	border: 2px solid #329f5b;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+#userVid{
+	position: absolute;
+	border: 2px solid #1e90ff;
+	bottom:5%;
+	right: 3%;
+	border-radius:10px;
+	width: 270px;
+	height: 170px;
+	object-fit: cover;
+}
+
+#vidIcons{
+	position: absolute;
+	bottom: 8%;
+	width:100%;
+}
+
+.iconFlex{
+	display:flex;
+	justify-content: center;
+}
+
+.vertFlex{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+#iconCont{
+	height:45px;
+	width:15%;
+	text-align:center;
+	font-size:1.9em;
+	border-radius:500px;
+	vertical-align:center;
+	background-color:#329f5b;
+	margin: 0 30px;
+}
+
+#iconCont > i{
+	margin-top: 8px;
+	color:black;
+	transition: color 0.2s;
+}
+
+#iconCont >i:hover{
+	color:white;
+}
+
+.imgHolder{
+	width:100%;
+	text-align:center;
+	display:none;
+}
+
+#vidIcons #userImg, #vidIcons #guestImg{
+	width: 45px;
+	height:45px;
+	background-size: 100% 100%;
+}
+
+#vidIcons #userImg{
+	border: 3px solid #1e90ff;
+}
+
+#vidIcons #guestImg{
+	border: 3px solid #329f5b;
+}
+
+/******************* File Transfer Page *********************/
+
+#fileTrBody{
+	height:90vh;
+	width:100%;
+	display:flex;
+}
+
+#userFileBody, #guestFileBody{
+	width: 50%;
+	height:90vh;
+	box-sizing:border-box;
+	text-align:center;
+}
+
+#userFileBody{
+	border-right: 3px solid #1e90ff;
+}
+#DragnDropCont > form{
+	width: 95%;
+	border-radius: 20px;
+	margin:auto;
+}
+
+
+
+#userUploadedFiles, #guestUploadedFiles{
+	border-radius: 20px;
+	width:95%;
+	margin: auto;
+	min-height: 15vh;
+	background-color: rgba(0,123,255, 0.7);
+}
+
+#userUploadedFiles{
+	margin-top: 10px;
+}
+
+#user_uploadedTable, #guest_uploadedTable{
+	width:100%;
+}
+
+
+
+.fileButton>i{
+	font-size:3em;
+	color:red;
+	transition: font-size 0.2s;
+	margin-top:10px;
+}
+
+.fileButton>i:hover{
+	font-size: 3.4em;
+	cursor:pointer;
+}
+
+#downloadButton>i{
+	color: blue;
+}
+
+#guestFileBody #guestImg, #userFileBody #userImg{
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*******ERROR PAGE*********/
+
+#errorScreen{
+	height:calc(100% - 60px);
+	width: 100%;
+	background-color: #1E90FF;
+}
+
+#errorCont{
+	width: 100%;
+	height: 80%;
+}
+
+#errorCont p{
+	font-size: 3em;
+	text-align:center;
+	color:white;
+}
+
+#errorCont p a{
+	width: 40%;
+	margin: auto;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#empBig{
+	font-size: 2.1em;
+}
+
+/* MEDIA QUERIES - RESPONSIVNESS */
+
+/*Laptop compatability*/
+
+@media only screen and (max-width: 1300px){
+	#wrapper3{
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 1150px){
+	#wrapper3{
+		width: 100%;
+	}
+	#sendButton{
+		width: 8%;
+		font-size:3.3em;
+	}
+	#flipbook{
+		margin-top: 8% !important;
+	}
+}
+
+/*Small laptop compatability */
+
+@media only screen and (max-width: 1024px){
+	#settings #interfaceWrapper{
+		width: 100%;
+	}
+	#settingsOps{
+		width:95%;
+		font-size:1.5em;
+	}
+	.avatars img{
+		width: 60px;
+		height: 60px;
+	}
+	#userVid{
+		width: 250px;
+		height: 170px;
+	}
+	#joinBox{
+		width: 60%;
+	}
+	.flip-card{
+		width: 350px;
+	}
+	#userSide{
+		width: 15%;
+	}
+	#chatMid{
+		width: 70%;
+	}
+	#settings{
+		z-index: 1501;
+	}
+	#inputText{
+		width:60%;
+		bottom: 8px;
+		z-index: 1500;
+	}
+	#textExtend{
+		width: 60%;
+		bottom: 80px;
+	}
+	#chatInput{
+		width:88.9%;
+	}
+	#sendButton{
+		font-size: 3.5em;
+	}
+	#userSide > div{
+		height: 120px;
+		width: 120px;
+	}
+}
+
+@media only screen and (max-width:900px){
+	.flip-card{
+		width: 280px;
+		height: 376px;
+	}
+	.flip-card-front img{
+		height: 335px;
+	}
+	.flip-card-front p{
+		font-size: 0.8em;
+	}
+	.flip-card-back h3{
+		font-size: 1.4rem;
+	}
+	.flip-card-back p{
+		font-size: 0.8em;
+	}
+	.flip-para-body{
+		font-size: 0.6em !important;
+	}
+}
+
+@media only screen and (max-width: 880px){
+	#settingsOps{
+		font-size:1.2em;
+	}
+	h2{
+		font-size:1.8rem;
+	}
+	#confirmButton{
+		margin-top: 30px;
+		width: 100%;
+	}
+	#userVid{
+		width: 200px;
+		height: 120px;
+		bottom: 6%;
+	}
+	.guest{
+		display: none !important;
+	}
+	#userSide{
+		height: 30%;
+	}
+	#chatMid{
+		width: 85%;
+	}
+	#inputText, #textExtend{
+		width: 74%;
+	}
+	#flipbook{
+		height: 550px;
+		width: 700px;
+	}
+	#flipbook .page{
+		height: 550px;
+		width: 700px;
+	}
+
+}
+
+/*Tablet Compatability*/
+
+@media only screen and (max-width: 768px) {
+	#wrapper, #about > div{
+		width: 90%;
+	}
+	#about > div, #contactIntro{
+		font-size: 1.4em;
+	}
+	#twitter, #email{
+		font-size: 1.5em;
+	}
+	#footer{
+		font-size: 1.1em;
+	}
+	.featHead > i{
+		font-size: 7em;
+	}
+	#settingsOps{
+		padding-left: 20px;
+	}
+	.optTitle{
+		font-size:1.6rem;
+	}
+	#confirmButton{
+		margin-top: 20px;
+	}
+	#imageChange #userImg{
+		height:100px;
+		width: 100px;
+	}
+	.avatars img{
+		height: 50px;
+		width: 50px;
+	}
+	#uploadImg, #chooseUrl{
+		font-size: 0.8em;
+	}
+	#userVid{
+		width: 160px;
+		height: 100px;
+	}
+	#iconCont{
+		font-size: 1.4em;
+	}
+	#iconCont > i{
+		margin-top: 12px;
+	}
+	#errorCont p{
+		font-size: 2.5em;
+	}
+
+	#joinBox .form-label-group a{
+		width: 50%;
+	}
+	#userSide > div{
+		height:80px;
+		width: 80px;
+	}
+
+	#flipbook{
+		height: 550px;
+		width: 650px;
+	}
+	#flipbook .page{
+		height: 550px;
+		width: 650px;
+	}
+
+}
+
+@media only screen and (max-width: 685px){
+	.navItem{
+		font-size: 1.1em;
+	}
+
+	#displayLogo{
+		font-size:6em;
+	}
+	#subscript{
+		font-size: 1.4em;
+	}
+	.button{
+		width: auto;
+	}
+
+	#wrapper > div > p{
+		font-size: 1.4em;
+	}
+	#wrapper > div > i{
+		font-size: 6em;
+	}
+	.featHead > i{
+		font-size: 6em;
+	}
+	#settingsOps{
+		padding-left: 10px;
+		font-size: 1.1em;
+	}
+	.optTitle{
+		font-size:1.4rem;
+	}
+	#confirmButton{
+		font-size: 1.1em;
+	}
+	#userVid{
+		width: 120px;
+		height: 160px;
+	}
+	#errorCont p{
+		font-size: 2em;
+	}
+	#joinBox h3{
+		font-size: 1.6em;
+	}
+	.flip-card{
+		height: 370px;
+	}
+	#about > div{
+		width: 95%;
+	}
+	#sendButton{
+		width: auto;
+		font-size: 3.2em;
+	}
+	#flipbook{
+		height: 500px;
+		width: 550px;
+	}
+	#flipbook .page{
+		height: 500px;
+		width: 550px;
+	}
+
+}
+
+@media only screen and (max-width: 610px){
+	h2{
+		font-size: 1.7rem;
+	}
+	h3{
+		font-size: 1.5rem;
+	}
+	#wrapper > div > p{
+		font-size: 1.2em;
+	}
+	.featHead > i{
+		font-size: 5.5em;
+	}
+	#settingsOps{
+		padding-left: 5px;
+		font-size: 0.9em;
+	}
+	h4{
+		font-size:1em;
+	}
+	.avatars img{
+		height: 40px;
+		width: 40px;
+	}
+	#uploadImg, #chooseUrl{
+		font-size: 0.6em;
+	}
+	.flip-card{
+		height: 320px;
+		width: 235px;
+	}
+	.flip-card-front img{
+		height: 285px;
+	}
+	.flip-card-back h3{
+		font-size: 1.2rem;
+	}
+	.flip-card-back p{
+		font-size: 0.7em;
+		margin-bottom: 0;
+	}
+	#userSide{
+		width: 8%;
+		height: 16%;
+	}
+	#chatMid{
+		width:92%;
+	}
+	#userSide > div{
+		height: 45px;
+		width: 45px;
+		border: 2px solid #1E90FF;
+	}
+	#chatInput{
+		width: 84.9%;
+	}
+	#sendButton{
+		font-size: 3.9em;
+	}
+	#flipbook{
+		margin-top: 10% !important;
+	}
+
+}
+
+@media only screen and (max-width: 570px){
+	#wrapper > div > p{
+		font-size: 1.1em;
+	}
+
+	#wrapper > div > i{
+		font-size: 5em;
+	}
+	.browser{
+		padding-top: 30px;
+	}
+	.browser>i{
+		font-size:3.5em;
+	}
+	#about > div, #contactIntro{
+		font-size: 1.2em;
+	}
+	#about > div > h3{
+		margin: 15px 0;
+	}
+	#twitter, #email{
+		font-size: 1em;
+	}
+	#footer{
+		font-size: 1em;
+	}
+	#homeInterface > #userImg{
+		height: 110px;
+		width: 110px;
+	}
+	.userHomeClimate{
+		margin-left: -55px;
+		margin-top: -28px;
+	}
+	.optTitle{
+		font-size: 1.2em;
+	}
+	#base > div > .form-control, #newPass .form-control, #oldPass .form-control{
+		font-size: 0.8em;
+	}
+	#confirmButton{
+		font-size: 0.8em;
+		margin-top: 10px;
+	}
+	#userVid{
+		width: 100px;
+		height: 150px;
+		bottom: 7%;
+	}
+	#errorCont p{
+		font-size: 1.7em;
+	}
+	#errorCont p a{
+		font-size: 0.6em;
+	}
+	#joinBox{
+		width: 80%;
+	}
+	#userSide{
+		height:12%;
+	}
+	#userSide > div{
+		height: 35px;
+		width: 35px;
+	}
+	.card-title{
+		font-size: 1.3em;
+	}
+	.form-signin .form-control{
+		font-size: 0.8em;
+	}
+	.form-signin .form-label-group label{
+		line-height: normal;
+		font-size: 0.9em;
+	}
+	.form-register .form-control{
+		line-height: normal;
+		font-size: 0.7em;
+	}
+	.form-register .form-label-group label{
+		font-size: 0.8em;
+	}
+	.form-signin .btn, .form-register .btn {
+		font-size: 70%;
+		padding: 0.8rem;
+    }
+	#registerPrompt{
+		position: relative;
+		bottom: 20px;
+	}
+	#flipbook{
+		height: 500px;
+		width: 550px;
+	}
+	#flipbook .page{
+		height: 500px;
+		width: 550px;
+	}
+}
+
+@media only screen and (max-width: 530px){
+	.flip-card{
+		height: 274px;
+		width: 210px;
+	}
+	.flip-card-front img{
+		height: 240px;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	h2{
+		font-size: 1.4rem;
+	}
+	h3{
+		font-size: 1.2rem;
+	}
+	#wrapper > div > p{
+		font-size: 1em;
+	}
+
+	#wrapper > div > i{
+		font-size: 4em;
+	}
+	.browser{
+		padding-top: 25px;
+	}
+	.browser>i{
+		font-size:3em;
+	}
+	.featHead > i{
+		font-size: 5em;
+	}
+	.featHead > p{
+		font-size: 1.2em;
+	}
+	#vidIcons{
+		width:80%;
+	}
+	#iconCont{
+		width: 30%;
+	}
+	#joinBox .form-label-group a{
+		font-size: 1em;
+	}
+	#chatInput{
+		width: 83.9%;
+	}
+	#chatMid{
+		border-right: 2px solid #1E90FF;
+		border-left: 2px solid #1E90FF;
+	}
+	#flipbook{
+		margin-top: 12% !important;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.button{
+		font-size:1.2em;
+	}
+	#twitter, #email{
+		font-size: 1em;
+	}
+	.browser{
+		padding-top: 20px;
+	}
+	.browser>i{
+		font-size:2.5em;
+	}
+	#about > div, #contactIntro{
+		font-size: 1em;
+	}
+	#about > div > h3{
+		margin: 10px 0;
+	}
+	#settingsOps{
+		font-size: 0.7em;
+	}
+	.optTitle{
+		font-size: 1em;
+		margin-bottom: 15px;
+	}
+	#confirmButton{
+		margin-top: 0;
+	}
+	#imageChange #userImg{
+		height: 80px;
+		width: 80px;
+	}
+	.avatars img{
+		height: 30px;
+		width: 30px;
+	}
+	#uploadImg, #chooseUrl{
+		width: auto;
+	}
+	#errorCont p{
+		font-size: 1.4em;
+	}
+	.flip-card{
+		height: 228px;
+		width: 184px;
+	}
+	.flip-card-front img{
+		height:200px;
+	}
+	.flip-card-back h3{
+		font-size: 1rem;
+	}
+	#userSide > div{
+		height: 30px;
+		width: 30px;
+	}
+	#sendButton{
+		font-size: 3.4em;
+	}
+	.card-title{
+		font-size: 1.1em;
+	}
+	.form-signin .form-control{
+		font-size: 0.7em;
+	}
+	.form-signin .form-label-group label{
+		line-height: normal;
+		font-size: 0.8em;
+	}
+	.form-register .form-control{
+		line-height: normal;
+		font-size: 0.6em;
+	}
+	.form-register .form-label-group label{
+		font-size: 0.7em;
+	}
+	.form-signin .btn, .form-register .btn {
+		font-size: 60%;
+		padding: 0.7rem;
+    }
+	#registerPrompt{
+		bottom: 20px;
+	}
+	#flipbook{
+		width: 400px;
+	}
+	#flipbook .page{
+		width: 400px;
+	}
+	#registerPrompt{
+		bottom: 12px;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.navItem{
+		font-size: 0.8em;
+	}
+	.logo{
+		font-weight: 700;
+	}
+	.button{
+		font-size: 1em;
+	}
+	#base > div > .form-control, #newPass .form-control, #oldPass .form-control{
+		font-size: 0.6em;
+	}
+	#confirmButton{
+		font-size: 0.6em;
+	}
+	#vidIcons{
+		width: 60%;
+	}
+	#iconCont{
+		margin: 0 10px;
+		width: 40%;
+	}
+	#vidIcons{
+		bottom: 4%;
+	}
+	#userVid{
+		bottom: 4%;
+	}
+	#joinBox{
+		width: 90%;
+	}
+	#joinBox h3{
+		font-size: 1.3em;
+	}
+	.form-control{
+		font-size: 0.8em;
+	}
+	.flip-card-front img{
+		border: 5px solid white;
+	}
+}
+
+/*Mobile Phone Compatability*/
+
+@media only screen and (max-width: 410px){
+	h2{
+		font-size: 1.1rem;
+	}
+	h3{
+		font-size: 1rem;
+	}
+	#wrapper > div > p{
+		font-size: 0.8em;
+	}
+	.browser > p{
+		font-size: 0.8em;
+	}
+	#twitter, #email{
+		font-size: 0.8em;
+	}
+	#footer{
+		font-size: 0.8em;
+	}
+	.optTitle{
+		font-size: 0.8em;
+		margin-bottom: 10px;
+	}
+	#errorCont p{
+		font-size: 1.2em;
+	}
+	#errorCont p a{
+		font-size: 0.7em;
+	}
+	.flip-card{
+		height: 190px;
+		width: 151px;
+	}
+	.flip-card-front img{
+		height: 170px;
+	}
+	.flip-card-front p{
+		font-size: 0.7em;
+	}
+	.flip-card-back h3{
+		font-size: 0.8rem;
+	}
+	.flip-card-back p{
+		font-size: 0.6em;
+	}
+	.flip-para-body{
+		font-size: 0.5em !important;
+		padding: 5px;
+	}
+	#chatInput{
+		width: 82.9%;
+	}
+	.card-title{
+		font-size: 1em;
+	}
+	.form-signin .form-control{
+		font-size: 0.6em;
+	}
+	.form-signin .form-label-group label{
+		line-height: normal;
+		font-size: 0.7em;
+	}
+	.form-register .form-control{
+		line-height: normal;
+		font-size: 0.5em;
+	}
+	.form-register .form-label-group label{
+		font-size: 0.5em;
+	}
+	.form-signin .btn, .form-register .btn {
+		font-size: 50%;
+		padding: 0.6rem;
+    }
+	#registerPrompt{
+		bottom: 20px;
+	}
+	#flipbook{
+		width: 350px;
+	}
+	#flipbook .page{
+		width: 350px;
+	}
+	#registerPrompt{
+		font-size: 0.8em;
+		bottom: 0px;
+	}
+	#home{
+		font-size: 1.5em;
+		height: 60px;
+	}
+}
+
+@media only screen and (max-width: 376px){
+	h2{
+		font-size: 1rem;
+	}
+	h3{
+		font-size: 0.9rem;
+	}
+	.navItem{
+		font-size: 0.7em;
+	}
+	#displayLogo{
+		font-size:4.5em;
+	}
+	#subscript{
+		font-size: 1em;
+	}
+	.button{
+		padding: 5px 20px;
+	}
+	#wrapper > div > i{
+		font-size: 3.5em;
+	}
+	.browser{
+		padding-top: 10px;
+	}
+	.browser > i{
+		font-size: 2em;
+	}
+	#about > div, #contactIntro{
+		font-size: 0.8em;
+	}
+	#about > div > h3{
+		margin: 6px 0;
+	}
+	.featHead > i{
+		font-size: 4.3em;
+	}
+	#settingsOps{
+		font-size: 0.6em;
+	}
+	.avatars img{
+		height: 25px;
+		width: 25px;
+	}
+	.flip-card-back p{
+		font-size: 0.8em;
+	}
+	.flip-para-body{
+		font-size: 0.6em !important;
+
+	}
+	#userSide{
+		height:8%;
+	}
+	#userSide > div{
+		height: 25px;
+		width: 25px;
+	}
+	#chatInput{
+		width: 81.9%;
+	}
+	#sendButton{
+		font-size: 3.1em;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	.navItem{
+		font-size: 0.6em;
+	}
+	#wrapper > div > p{
+		font-size: 0.6em;
+	}
+	#wrapper > div > i{
+		font-size: 3em;
+	}
+	#about > div{
+		font-size: 0.6em;
+	}
+	#errorCont p{
+		font-size: 1em;
+	}
+	.flip-card-front p{
+		font-size: 1em;
+	}
+	.flip-card-back p{
+		font-size: 1em;
+	}
+	.flip-para-body{
+		font-size: 0.8em !important;
+
+	}
+	.card-title{
+		font-size: 0.9em;
+	}
+	.form-signin .form-control{
+		font-size: 0.5em;
+	}
+	.form-signin .form-label-group label{
+		line-height: normal;
+		font-size: 0.5em;
+	}
+	.form-register .form-control{
+		line-height: normal;
+		font-size: 0.5em;
+	}
+	.form-register .form-label-group label{
+		font-size: 0.4em;
+	}
+	.form-signin .btn, .form-register .btn {
+		font-size: 50%;
+		padding: 0.6rem;
+    }
+	#registerPrompt{
+		bottom: 20px;
+	}
+	#flipbook{
+		width: 310px;
+	}
+	#flipbook .page{
+		width: 310px;
+	}
+}
+
+@media only screen and (max-width: 330px){
+	.navItem{
+		font-size: 0.5em;
+	}
+	.flip-card{
+		height:170px;
+		width: 137px;
+	}
+	.flip-card-front img{
+		height: 150px;
+	}
+	.flip-card-back p{
+		font-size: 0.9em;
+	}
+	.flip-para-body{
+		font-size: 0.7em !important;
+
+	}
+	#sendButton{
+		font-size: 2.9em;
+	}
+	#chatMid{
+		width:92%;
+	}
+}
+
+#remoteName {
+	text-align: center;
+	color: #7e3878;
+
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #329f5b;
+	outline: none;
+	margin-left: 100px;
+}
+
+#localName {
+	text-align: center;
+	color: #7e3878;
+
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #1e90ff;
+	outline: none;
+}
+
+#userTyping {
+	position: absolute;
+	top: 60%;
+	left: 90%;
+}

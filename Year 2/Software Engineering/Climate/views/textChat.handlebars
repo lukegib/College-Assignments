@@ -1,0 +1,95 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="/javascripts/rtcScripts/textChat.js"></script>
+<script src="/javascripts/rtcScripts/signalling.js"></script>
+
+		<nav id="home">
+			<div id="navWrapper">
+				<div class="sideNav">
+					<a href="/users"><i class="fas fa-arrow-left"></i></a>
+				</div>
+				<div class="middleNav navbar-header">
+					Climate
+				</div>
+				<div class="sideNav setButton">
+					<a><i class="fas fa-cog"></i></a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- A simple text interface - user image on right, guest image on left, textbox in the middle -->
+		<section id="textInterface">
+			<div id="interfaceWrapper">
+				<div id="userSide" class="centerFlex user">
+					<input type="text" id="localName" placeholder="You"></input>
+				</div>
+
+
+				<div id="chatMid" class="chatFlex">
+					<div id="chatOutput">
+						<div id="testFlex">
+						</div>
+						<div id="textExtend">
+							<i id="extendButton" class="fas fa-chevron-up"></i>
+						</div>
+					</div>
+
+					<div id="chatInput">
+						<textarea type="textbox" id="inputText" placeholder="Enter Message..."></textarea>
+					</div>
+
+					<div id="sendButton" class="centerFlex">
+						<i id="send" class="fas fa-arrow-alt-circle-right"></i>
+					</div>
+				</div>
+				<div id="guestSide" class="centerFlex user">
+					<input type="text" id="remoteName" placeholder="Them" disabled></input>
+					<p id="userTyping">Typing...</p>
+				</div>
+
+
+			</div>
+		</section>
+
+	<script>
+
+	$(document).ready(function(){
+		//plugin for scrollbar check
+		(function($) {
+			$.fn.hasScrollBar = function() {
+			return this.get(0).scrollHeight > this.get(0).clientHeight;
+			}
+		})(jQuery);
+
+		//Check if the scrollbar is ever activated
+		$('#inputText').keydown(function(){
+			if ($('#inputText').hasScrollBar()){
+				$('#textExtend').show();
+			}
+		});
+
+		//when a scrollbar has been detected a button pops up to allow the text input to be extended
+
+		$('#extendButton').click(function(){
+			//Monitors clicks
+			var clicks = $(this).data('clicks');
+			  //if odd clicks opens
+			  if (!clicks) {
+				 $('#inputText').animate({height: '30vh'}, 500);
+				 $('#extendButton').animate({height: '25vh'}, 500);
+				 $('#extendButton').addClass('fa-chevron-down').removeClass('fa-chevron-up');
+
+			  }
+			  //else even clicks so close
+			  else {
+				 $('#inputText').animate({height: '9vh'}, 500);
+				 $('#extendButton').animate({height: '0'}, 510);
+				 $('#extendButton').addClass('fa-chevron-up').removeClass('fa-chevron-down');
+			  }
+			  $(this).data("clicks", !clicks);
+
+		});
+
+	});
+
+	</script>
