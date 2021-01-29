@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+	var words =0;
+	var i=0;
+	function updateOutput() {
+		var txt = document.getElementById("txtUserInput").value; // text typed by user
+		var numchars = txt.length;
+		document.getElementById("pOutput").innerHTML = ""+numchars+" Characters"; // show result to user
+		for (; i<numchars; i++) {
+			var currLetter = txt.substr(i,1);
+				if(currLetter == " " || currLetter == "."){
+				words++;
+				document.getElementById("words").innerHTML = ""+words+" Words";
+				}
+		}
+	}
+	
+	</script>
+	</head>
+		<body>
+			<textarea id='txtUserInput' onkeyup="updateOutput();" value=""></textarea><br>
+			<p id='pOutput'>
+				0 Characters <br> <div id="words">0 Words</div>
+			</p>
+		</body>
+</html>

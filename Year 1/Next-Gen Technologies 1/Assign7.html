@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Calender</title>
+	<!-- css style sheet -->
+	<style>	
+	table{width:25%;}
+	td{text-align: center;
+	background-color: #cd5c5c;}
+	th{background-color: #C70039;}
+	table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	}	
+	</style>
+	<!-- Javascript code -->
+	<script>
+	function myFunction(){
+	var month = prompt("How many days in the month?", "31");
+	var day = prompt("What day? (number 0-6)", "0");
+	var d = new Date();
+	var s = d.getDate();
+	var n = 1;
+	<!-- Create the calender table headings and columns -->
+	document.getElementById("tbl").innerHTML = "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+	for(var i=0; i<5; i++){
+	document.getElementById("tbl").innerHTML += "<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>";
+	}
+	<!-- Fill the calender using users data -->
+	var table = document.getElementById("tbl");
+	for (var i = 1, row; row = table.rows[i]; i++) {
+	
+		for (var j = 0, col; col = row.cells[j]; j++) {
+				if(day>j && i==1){col.innerHTML=""; col.setAttribute("style","background-color: salmon;");}
+				else{
+					if(n<=month){col.innerHTML = n;}
+					else if(n>month){col.setAttribute("style","background-color: salmon;");}
+					if(n==s){col.setAttribute("style","background-color: #f25151; font-weight: bold; text-decoration: underline;");}
+					n++;
+				}
+				
+				
+		}	  
+	}
+}
+	
+	
+	</script>
+</head>
+<body>
+
+	<div id="cal">
+		<button id="button" onclick="myFunction()">Create Calender</button> <!--button to call function to create calender -->
+		<table id="tbl">
+		</table>
+	</div>
+</body>
+</html>

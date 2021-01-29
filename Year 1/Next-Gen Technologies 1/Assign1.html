@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Image Changer</title>
+	<script>
+		var youClicked = 0;
+		function changeImage() {
+		youClicked++;
+		if(youClicked == 0)
+		{
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-1.png";
+		}
+		if(youClicked == 1)
+		{
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-2.png";
+		}
+		else if(youClicked == 2)
+		{
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-3.png";
+		}
+		else if(youClicked == 3)
+		{
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-4.png";
+		}
+		else if(youClicked == 4){
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-5.png";
+		}
+		else if(youClicked == 5){
+		document.getElementById("imgClickAndChange").src = "http://www.psychicsoftware.com/ct1113/banner-image-6.png";
+		youClicked = -1;
+		}
+		}
+
+	</script>
+</head>
+	<body>
+	<img src="http://www.psychicsoftware.com/ct1113/banner-image-1.png" id="imgClickAndChange" onclick="changeImage()"  />
+	</body>
+</html>

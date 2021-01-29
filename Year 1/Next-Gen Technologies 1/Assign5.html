@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+	var clicks = 0;
+	var dblClicks = 0;
+	var ov=0;
+	var ot=0;
+	var i=0;
+	function UpdateClick() {
+		document.getElementById("clck").innerHTML = clicks+=1;
+	}
+	function UpdateDblClick() {
+		document.getElementById("dclick").innerHTML = dblClicks+=1;
+	}
+	function myOverFunction() {
+    	document.getElementById("ovr").innerHTML = ov+=1;
+	}
+	function myOutFunction(){
+	document.getElementById("out").innerHTML = ot+=1;
+	}
+	
+	</script>
+	</head>
+		<body>
+			
+			<img id="image" src="http://writingexercises.co.uk/images2/randomimage/boat.jpg"  onclick="UpdateClick();" ondblclick="UpdateDblClick();" onmouseover="myOverFunction()" onmouseout="myOutFunction()"/>
+			<br>
+			
+			<p> 
+			<span id="clck">0</span> Clicks<br>
+			<span id="dclick">0</span> Double Clicks<br>
+			<span id="ovr">0</span> Rollovers<br>
+			<span id="out">0</span> Outs
+			
+			</p>
+		</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Assignment 6</title>
+	</head>
+		<body>
+			
+			<p>
+			Sum of array = <span id="sum"></span><br>
+			Average of array = <span id="avg"></span><br>
+			Max number in array = <span id="max"></span><br>
+			Min number in array = <span id="min"></span>
+			</p>
+			
+			<p id="element"> 
+			</p>
+			
+		<script>
+	
+		var arrA = [];
+		var sum = 0;
+		var avg;
+		var max= 0;
+		var min= 999;
+		for(var i=0; i<100; i++){
+		arrA[i] = Math.floor((Math.random() * 999)+1);
+		sum+=arrA[i];
+		if(arrA[i]>max){max = arrA[i];}
+		if(arrA[i]<min){min = arrA[i];}
+		}
+		avg = sum/100;
+		
+		arrA.toString();
+		document.getElementById("element").innerHTML = "Elements in array =" +arrA;
+		document.getElementById("sum").innerHTML = sum;
+		document.getElementById("avg").innerHTML = avg;
+		document.getElementById("max").innerHTML = max;
+		document.getElementById("min").innerHTML = min;
+		
+		
+		</script>
+	</body>
+</html>

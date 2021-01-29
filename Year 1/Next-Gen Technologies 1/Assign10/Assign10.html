@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+window.setInterval(function getServerTime() {
+// Create new XMLHttpRequest Object
+var requester = new XMLHttpRequest;
+/* Monitor the onreadystatechange event for a change in the readyState.
+This function will be executed whenever the readyState is changed so must
+be declared before the request is sent */
+requester.onreadystatechange = function() {
+if (requester.readyState == 4 && requester.status == 200) {
+// Put the response into the div
+document.getElementById("divTime").innerHTML =
+requester.responseText;
+}
+}
+// Open connection to time.php and send the request asynchronously
+requester.open("GET", "time.php", true);
+requester.send();
+}, 500)
+
+window.setInterval(function getBrowserTime(){
+	var day = new Date();
+	var hours = day.getHours();
+	var mins = day.getMinutes();
+	var sec = day.getSeconds();
+	if(mins < 10) mins = "0" + mins;
+	if(sec < 10) sec = "0" + sec;
+	document.getElementById("divTime2").innerHTML = hours + ":" + mins + ":" + sec;
+}, 500);
+
+
+</script>
+</head>
+<body onload = "getServerTime(); getBrowserTime();">
+<h5>The time on the server is:</h5> <div id="divTime"></div> 
+<h5>The time on the browser is: </h5> <div id="divTime2"></div>
+
+</body>
+</html>

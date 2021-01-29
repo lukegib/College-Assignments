@@ -1,0 +1,8 @@
+table{width:25%;}
+	td{text-align: center;
+	background-color: #cd5c5c;}
+	th{background-color: #C70039;}
+	table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	}	
